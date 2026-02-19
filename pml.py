@@ -21,12 +21,6 @@ SAVE_DIR = "output"
 OUTPUT_FILE = os.path.join(SAVE_DIR, "pml.txt")
 USER_AGENT = "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)"
 
-SPECIAL_FLAGS = {
-    "england": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "wales": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-    "eu": "🇪🇺", "uefa": "🇪🇺", "europe": "🇪🇺",
-    "international": "🌍", "world": "🌎"
-}
-
 THAI_MONTHS = {
     "January": "ม.ค", "February": "ก.พ", "March": "มี.ค", "April": "เม.ย",
     "May": "พ.ค", "June": "มิ.ย", "July": "ก.ค", "August": "ส.ค",
@@ -54,17 +48,9 @@ CHANNELS = [
     {"name": "V Sport Premier League (Norway )", "url": "https://www.livesoccertv.com/channels/v-sport-premier-league/", "logo": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704", "stream_url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts"}
 ]
 
-def get_flag_emoji_from_class(tag):
-    if not tag: return "🏆"
-    classes = tag.get("class", [])
-    country_name = next((c for c in classes if c != "flag"), "").lower()
-    if country_name in SPECIAL_FLAGS: return SPECIAL_FLAGS[country_name]
-    if len(country_name) >= 2:
-        try:
-            iso_code = country_name[:2]
-            return "".join(chr(127397 + ord(c.upper())) for c in iso_code)
-        except: return "🏆"
-    return "🏆"
+# =========================
+# HELPER FUNCTIONS
+# =========================
 
 def convert_date_to_thai(dt_obj):
     month_en = dt_obj.strftime("%B")
@@ -112,30 +98,37 @@ def scrape_channel(ch):
                 if "matchrow" in row.get("class", []) and current_dt:
                     time_tag = row.select_one(".timecell span")
                     match_link = row.select_one("td#match a")
-                    league_tag = row.select_one(".compcell_right a") or row.select_one(".compcell_right")
+                    league_tag = row.select_one(".compcell_right")
                     
                     if time_tag and match_link:
-                        flag = get_flag_emoji_from_class(league_tag)
-                        l_name = league_tag.get_text(strip=True) if league_tag else ""
-                        raw_time_str = time_tag.get_text(strip=True).replace("am", "").replace("pm", "").strip()
+                        raw_time_str = time_tag.get_text(strip=True).lower()
                         
+                        # ✅ แก้ไข Logic การบวกเวลา 7 ชม. ที่นี่
                         try:
-                            # บังคับแปลงเวลาเป็น 24hr และบวก 7 ชม.
-                            match_dt_utc = datetime.combine(current_dt.date(), datetime.strptime(raw_time_str, "%H:%M").time())
-                            match_dt_thai = match_dt_utc + timedelta(hours=7)
-                            # บังคับใช้รูปแบบ 24 ชม. ทันทีที่แปลงเสร็จ
-                            final_time_24h = match_dt_thai.strftime("%H:%M") 
-                            final_date_obj = match_dt_thai
+                            # 1. จัดการกรณีหน้าเว็บแสดง am/pm ให้เป็น 24hr ก่อน
+                            if 'am' in raw_time_str or 'pm' in raw_time_str:
+                                time_obj = datetime.strptime(raw_time_str, "%I:%M%p")
+                            else:
+                                time_obj = datetime.strptime(raw_time_str, "%H:%M")
+                            
+                            # 2. รวมวันที่หน้าเว็บกับเวลาที่ดึงมา (UTC)
+                            full_dt_utc = datetime.combine(current_dt.date(), time_obj.time())
+                            
+                            # 3. บวก 7 ชั่วโมงให้เป็นเวลาไทย
+                            full_dt_thai = full_dt_utc + timedelta(hours=7)
+                            
+                            # 4. ดึงผลลัพธ์ใหม่
+                            final_time = full_dt_thai.strftime("%H:%M")
+                            final_date = full_dt_thai # ใช้อันนี้จัดกลุ่ม เพราะวันที่อาจขยับ
                         except:
-                            final_time_24h = raw_time_str
-                            final_date_obj = current_dt
+                            final_time = raw_time_str
+                            final_date = current_dt
 
                         local_matches.append({
-                            "dt_obj": final_date_obj,
-                            "time_str": final_time_24h, 
+                            "dt_obj": final_date,
+                            "time_str": final_time, 
                             "match_name": match_link.get_text(strip=True),
-                            "league_full": f"{flag}{l_name}",
-                            "channel_name": ch["name"],
+                            "league_info": league_tag.get_text(strip=True) if league_tag else "",
                             "channel_logo": ch["logo"],
                             "stream_url": ch["stream_url"]
                         })
@@ -156,21 +149,11 @@ if __name__ == "__main__":
         all_raw_data.extend(res)
 
     if all_raw_data:
-        # ใช้ defaultdict และจัดกลุ่มโดยใช้คีย์ที่บังคับเวลาเป็น 24hr
-        grouped = defaultdict(lambda: defaultdict(list))
+        # จัดกลุ่มโดยใช้ความแม่นยำของวันที่ไทย
+        grouped = defaultdict(list)
         for m in all_raw_data:
-            dt_key = m["dt_obj"].date()
-            time_24h = m["time_str"]
-            # บังคับสร้างชื่อคู่ด้วยเวลา 24hr อีกครั้งเพื่อความชัวร์
-            m_key = f"{time_24h} | {m['match_name']} | {m['league_full']}"
-            
-            grouped[dt_key][m_key].append({
-                "name": m_key,
-                "image": m["channel_logo"],
-                "url": m["stream_url"],
-                "userAgent": USER_AGENT,
-                "info": m["league_full"]
-            })
+            date_key = m["dt_obj"].date()
+            grouped[date_key].append(m)
 
         final_output = {
             "name": f"Premier League @{today_thai}",
@@ -179,18 +162,36 @@ if __name__ == "__main__":
             "groups": []
         }
 
-        for dt_date in sorted(grouped.keys()):
+        # เรียงลำดับวันที่
+        for dt_key in sorted(grouped.keys()):
             match_list = []
-            # เรียงลำดับชื่อคู่ (0:45 จะมาก่อน 17:45)
-            for m_key in sorted(grouped[dt_date].keys()):
-                match_list.append({
-                    "name": m_key,
-                    "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-                    "stations": grouped[dt_date][m_key]
-                })
             
+            # เรียงลำดับแมตช์ตามเวลาภายในวันนั้นๆ
+            sorted_matches = sorted(grouped[dt_key], key=lambda x: x["dt_obj"])
+            
+            # ป้องกันการเขียนข้อมูลซ้ำในชื่อคู่
+            unique_matches = {}
+            for m in sorted_matches:
+                m_title = f"{m['time_str']} | {m['match_name']} | {m['league_info']}"
+                if m_title not in unique_matches:
+                    unique_matches[m_title] = []
+                unique_matches[m_title].append({
+                    "name": m_title,
+                    "image": m["channel_logo"],
+                    "url": m["stream_url"],
+                    "userAgent": USER_AGENT,
+                    "info": m["league_info"]
+                })
+
+            for m_title, stations in unique_matches.items():
+                match_list.append({
+                    "name": m_title,
+                    "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+                    "stations": stations
+                })
+
             final_output["groups"].append({
-                "name": f"วันที่ {convert_date_to_thai(datetime.combine(dt_date, datetime.min.time()))}",
+                "name": f"วันที่ {convert_date_to_thai(datetime.combine(dt_key, datetime.min.time()))}",
                 "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
                 "groups": match_list
             })
@@ -198,3 +199,4 @@ if __name__ == "__main__":
         os.makedirs(SAVE_DIR, exist_ok=True)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
+        print(f"Update Finished: {OUTPUT_FILE}")
