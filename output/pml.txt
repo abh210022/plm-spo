@@ -4,101 +4,61 @@
   "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
   "groups": [
     {
-      "name": "วันที่ 19 ก.พ 2569",
-      "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-      "groups": [
-        {
-          "name": "12:45 | Fenerbahçe vs Nottingham Forest | 🇪🇺UEFA Europa League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:45 | Fenerbahçe vs Nottingham Forest | 🇪🇺UEFA Europa League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            },
-            {
-              "name": "12:45 | Fenerbahçe vs Nottingham Forest | 🇪🇺UEFA Europa League",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            }
-          ]
-        },
-        {
-          "name": "12:45 | Noah vs AZ | 🇪🇺UEFA Conference League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:45 | Noah vs AZ | 🇪🇺UEFA Conference League",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Conference League"
-            }
-          ]
-        },
-        {
-          "name": "12:45 | Zrinjski vs Crystal Palace | 🇪🇺UEFA Conference League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:45 | Zrinjski vs Crystal Palace | 🇪🇺UEFA Conference League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Conference League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Celtic vs Stuttgart | 🇪🇺UEFA Europa League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Celtic vs Stuttgart | 🇪🇺UEFA Europa League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            },
-            {
-              "name": "15:00 | Celtic vs Stuttgart | 🇪🇺UEFA Europa League",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Lille vs Crvena Zvezda | 🇪🇺UEFA Europa League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Lille vs Crvena Zvezda | 🇪🇺UEFA Europa League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            },
-            {
-              "name": "15:00 | Lille vs Crvena Zvezda | 🇪🇺UEFA Europa League",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "วันที่ 20 ก.พ 2569",
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
+        {
+          "name": "0:45 | Zrinjski vs Crystal Palace | 🇪🇺UEFA Conference League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "0:45 | Zrinjski vs Crystal Palace | 🇪🇺UEFA Conference League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Conference League"
+            }
+          ]
+        },
+        {
+          "name": "0:45 | Fenerbahçe vs Nottingham Forest | 🇪🇺UEFA Europa League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "0:45 | Fenerbahçe vs Nottingham Forest | 🇪🇺UEFA Europa League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Europa League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Celtic vs Stuttgart | 🇪🇺UEFA Europa League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Celtic vs Stuttgart | 🇪🇺UEFA Europa League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Europa League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Lille vs Crvena Zvezda | 🇪🇺UEFA Europa League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Lille vs Crvena Zvezda | 🇪🇺UEFA Europa League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Europa League"
+            }
+          ]
+        },
         {
           "name": "11:00 | Wellington Phoenix vs Auckland | 🇦🇺A-League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
@@ -113,33 +73,20 @@
           ]
         },
         {
-          "name": "15:00 | Athletic Club vs Elche | 🇸🇵La Liga",
+          "name": "12:30 | Canberra United vs Western Sydney Wanderers | 🇦🇺A-League Women",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "15:00 | Athletic Club vs Elche | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
+              "name": "12:30 | Canberra United vs Western Sydney Wanderers | 🇦🇺A-League Women",
+              "image": "https://api.bigwifegang.org/images/png/nz-skysport5.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport5_nz.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
+              "info": "🇦🇺A-League Women"
             },
             {
-              "name": "15:00 | Athletic Club vs Elche | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Central Coast Mariners vs Melbourne City | 🇦🇺A-League Women",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Central Coast Mariners vs Melbourne City | 🇦🇺A-League Women",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "name": "12:30 | Canberra United vs Western Sydney Wanderers | 🇦🇺A-League Women",
+              "image": "https://api.rentm3u8.com/images/png/uk-espn.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🇦🇺A-League Women"
             }
@@ -153,6 +100,19 @@
               "name": "15:00 | Melbourne Victory vs Wellington Phoenix | 🇦🇺A-League Women",
               "image": "https://api.bigwifegang.org/images/png/nz-skysport6.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport6_nz.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇦🇺A-League Women"
+            }
+          ]
+        },
+        {
+          "name": "15:00 | Central Coast Mariners vs Melbourne City | 🇦🇺A-League Women",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "15:00 | Central Coast Mariners vs Melbourne City | 🇦🇺A-League Women",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🇦🇺A-League Women"
             }
@@ -185,114 +145,15 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "09:00 | Juventus vs Como | 🇮🇹Serie A",
+          "name": "13:00 | Sydney FC vs Brisbane Roar | 🇦🇺A-League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "09:00 | Juventus vs Como | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            }
-          ]
-        },
-        {
-          "name": "10:00 | Aston Villa vs Leeds United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "10:00 | Aston Villa vs Leeds United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://api.letitgooooo.org/images/png/sg-hubpremier04.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier4.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
-            },
-            {
-              "name": "10:00 | Aston Villa vs Leeds United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://api.bigwifegang.org/images/png/nz-skysport7.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport7_nz.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
-            }
-          ]
-        },
-        {
-          "name": "10:00 | Chelsea vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "10:00 | Chelsea vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://api.bigwifegang.org/images/png/nz-skysport6.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport6_nz.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
-            }
-          ]
-        },
-        {
-          "name": "12:00 | Birmingham City vs Chatham Town | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:00 | Birmingham City vs Chatham Town | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
-            }
-          ]
-        },
-        {
-          "name": "12:00 | Lecce vs Internazionale | 🇮🇹Serie A",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:00 | Lecce vs Internazionale | 🇮🇹Serie A",
+              "name": "13:00 | Sydney FC vs Brisbane Roar | 🇦🇺A-League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            },
-            {
-              "name": "12:00 | Lecce vs Internazionale | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            }
-          ]
-        },
-        {
-          "name": "12:30 | Canberra United vs Western Sydney Wanderers | 🇦🇺A-League Women",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:30 | Canberra United vs Western Sydney Wanderers | 🇦🇺A-League Women",
-              "image": "https://api.bigwifegang.org/images/png/nz-skysport5.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport5_nz.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇦🇺A-League Women"
-            },
-            {
-              "name": "12:30 | Canberra United vs Western Sydney Wanderers | 🇦🇺A-League Women",
-              "image": "https://api.rentm3u8.com/images/png/uk-espn.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇦🇺A-League Women"
-            }
-          ]
-        },
-        {
-          "name": "12:30 | Osasuna vs Real Madrid | 🇸🇵La Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:30 | Osasuna vs Real Madrid | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
+              "info": "🇦🇺A-League"
             }
           ]
         },
@@ -310,58 +171,6 @@
           ]
         },
         {
-          "name": "13:00 | Sydney FC vs Brisbane Roar | 🇦🇺A-League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "13:00 | Sydney FC vs Brisbane Roar | 🇦🇺A-League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇦🇺A-League"
-            }
-          ]
-        },
-        {
-          "name": "14:45 | Cagliari vs Lazio | 🇮🇹Serie A",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "14:45 | Cagliari vs Lazio | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Atlético Madrid vs Espanyol | 🇸🇵La Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Atlético Madrid vs Espanyol | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
-            }
-          ]
-        },
-        {
           "name": "15:35 | Melbourne City vs Melbourne Victory | 🇦🇺A-League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
@@ -373,6 +182,46 @@
               "info": "🇦🇺A-League"
             }
           ]
+        },
+        {
+          "name": "22:00 | Chelsea vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "22:00 | Chelsea vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://api.letitgooooo.org/images/png/sg-hubpremier02.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier2.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
+            {
+              "name": "22:00 | Chelsea vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://api.bigwifegang.org/images/png/nz-skysport6.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport6_nz.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            }
+          ]
+        },
+        {
+          "name": "22:00 | Aston Villa vs Leeds United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "22:00 | Aston Villa vs Leeds United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://api.bigwifegang.org/images/png/nz-skysport7.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport7_nz.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
+            {
+              "name": "22:00 | Aston Villa vs Leeds United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            }
+          ]
         }
       ]
     },
@@ -381,106 +230,82 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "08:00 | Chelsea FC vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+          "name": "0:00 | Lecce vs Internazionale | 🇮🇹Serie A",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "08:00 | Chelsea FC vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+              "name": "0:00 | Lecce vs Internazionale | 🇮🇹Serie A",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
-            }
-          ]
-        },
-        {
-          "name": "08:00 | Getafe vs Sevilla | 🇸🇵La Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "08:00 | Getafe vs Sevilla | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
-            }
-          ]
-        },
-        {
-          "name": "09:00 | Atalanta vs Napoli | 🇮🇹Serie A",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "09:00 | Atalanta vs Napoli | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🇮🇹Serie A"
             }
           ]
         },
         {
-          "name": "09:00 | Nottingham Forest vs Liverpool | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "name": "0:00 | Birmingham City vs Chatham Town | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "09:00 | Nottingham Forest vs Liverpool | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://api.letitgooooo.org/images/png/sg-hubpremier04.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier4.m3u8",
+              "name": "0:00 | Birmingham City vs Chatham Town | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
+            }
+          ]
+        },
+        {
+          "name": "0:30 | West Ham United vs AFC Bournemouth | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "0:30 | West Ham United vs AFC Bournemouth | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://img2.pic.in.th/skp-de.png",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/90840.ts",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
+            {
+              "name": "0:30 | West Ham United vs AFC Bournemouth | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             }
           ]
         },
         {
-          "name": "10:15 | Barcelona vs Levante | 🇸🇵La Liga",
+          "name": "3:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "10:15 | Barcelona vs Levante | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
+              "name": "3:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://img2.pic.in.th/skp-de.png",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/90840.ts",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
-            }
-          ]
-        },
-        {
-          "name": "11:00 | Liverpool vs Everton | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
             {
-              "name": "11:00 | Liverpool vs Everton | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+              "name": "3:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://api.letitgooooo.org/images/png/sg-hubpremier02.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier2.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
+            {
+              "name": "3:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
-            }
-          ]
-        },
-        {
-          "name": "12:00 | Milan vs Parma | 🇮🇹Serie A",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
             {
-              "name": "12:00 | Milan vs Parma | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
+              "name": "3:00 | Manchester City vs Newcastle United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            }
-          ]
-        },
-        {
-          "name": "12:30 | Celta de Vigo vs Mallorca | 🇸🇵La Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:30 | Celta de Vigo vs Mallorca | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             }
           ]
         },
@@ -511,61 +336,74 @@
           ]
         },
         {
-          "name": "14:45 | Roma vs Cremonese | 🇮🇹Serie A",
+          "name": "20:00 | Chelsea FC vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:45 | Roma vs Cremonese | 🇮🇹Serie A",
+              "name": "20:00 | Chelsea FC vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
+            }
+          ]
+        },
+        {
+          "name": "21:00 | Nottingham Forest vs Liverpool | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "21:00 | Nottingham Forest vs Liverpool | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://img2.pic.in.th/skp-de.png",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/90840.ts",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            }
+          ]
+        },
+        {
+          "name": "21:00 | Sunderland vs Fulham | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "21:00 | Sunderland vs Fulham | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://api.letitgooooo.org/images/png/sg-hubpremier02.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier2.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            }
+          ]
+        },
+        {
+          "name": "23:00 | Liverpool vs Everton | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "23:00 | Liverpool vs Everton | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
+            }
+          ]
+        },
+        {
+          "name": "23:30 | Tottenham Hotspur vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "23:30 | Tottenham Hotspur vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://img2.pic.in.th/skp-de.png",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/90840.ts",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             },
             {
-              "name": "14:45 | Roma vs Cremonese | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
+              "name": "23:30 | Tottenham Hotspur vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Villarreal vs Valencia | 🇸🇵La Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Villarreal vs Valencia | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
-            }
-          ]
-        },
-        {
-          "name": "15:30 | Porto vs Rio Ave | 🇵🇴Primeira Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:30 | Porto vs Rio Ave | 🇵🇴Primeira Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇵🇴Primeira Liga"
-            }
-          ]
-        },
-        {
-          "name": "18:30 | Genoa vs Torino | 🇮🇹Serie A",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "18:30 | Genoa vs Torino | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             }
           ]
         }
@@ -576,48 +414,15 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "14:00 | London City Lionesses vs Tottenham Hotspur | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+          "name": "2:45 | Roma vs Cremonese | 🇮🇹Serie A",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:00 | London City Lionesses vs Tottenham Hotspur | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
+              "name": "2:45 | Roma vs Cremonese | 🇮🇹Serie A",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
-            }
-          ]
-        },
-        {
-          "name": "14:45 | Bologna vs Udinese | 🇮🇹Serie A",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "14:45 | Bologna vs Udinese | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🇮🇹Serie A"
-            },
-            {
-              "name": "14:45 | Bologna vs Udinese | 🇮🇹Serie A",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇮🇹Serie A"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Deportivo Alavés vs Girona | 🇸🇵La Liga",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Deportivo Alavés vs Girona | 🇸🇵La Liga",
-              "image": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇸🇵La Liga"
             }
           ]
         }
@@ -628,41 +433,35 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "12:45 | Atlético Madrid vs Club Brugge | 🇪🇺UEFA Champions League",
+          "name": "2:00 | London City Lionesses vs Tottenham Hotspur | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "12:45 | Atlético Madrid vs Club Brugge | 🇪🇺UEFA Champions League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Champions League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Bayer Leverkusen vs Olympiakos Piraeus | 🇪🇺UEFA Champions League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Bayer Leverkusen vs Olympiakos Piraeus | 🇪🇺UEFA Champions League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Champions League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Internazionale vs Bodø / Glimt | 🇪🇺UEFA Champions League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Internazionale vs Bodø / Glimt | 🇪🇺UEFA Champions League",
+              "name": "2:00 | London City Lionesses vs Tottenham Hotspur | 🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Champions League"
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿FA Women's Cup"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Everton vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Everton vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://img2.pic.in.th/skp-de.png",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/90840.ts",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            },
+            {
+              "name": "3:00 | Everton vs Manchester United | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704",
+              "url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             }
           ]
         }
@@ -673,24 +472,11 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "10:00 | Real Madrid U19 vs Chelsea U19 | 🇪🇺UEFA Youth League",
+          "name": "0:45 | Atlético Madrid vs Club Brugge | 🇪🇺UEFA Champions League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "10:00 | Real Madrid U19 vs Chelsea U19 | 🇪🇺UEFA Youth League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Youth League"
-            }
-          ]
-        },
-        {
-          "name": "12:45 | Atalanta vs Borussia Dortmund | 🇪🇺UEFA Champions League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "12:45 | Atalanta vs Borussia Dortmund | 🇪🇺UEFA Champions League",
+              "name": "0:45 | Atlético Madrid vs Club Brugge | 🇪🇺UEFA Champions League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
@@ -699,13 +485,26 @@
           ]
         },
         {
-          "name": "15:00 | Juventus vs Galatasaray | 🇪🇺UEFA Champions League",
+          "name": "3:00 | Internazionale vs Bodø / Glimt | 🇪🇺UEFA Champions League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "15:00 | Juventus vs Galatasaray | 🇪🇺UEFA Champions League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "name": "3:00 | Internazionale vs Bodø / Glimt | 🇪🇺UEFA Champions League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Champions League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Bayer Leverkusen vs Olympiakos Piraeus | 🇪🇺UEFA Champions League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Bayer Leverkusen vs Olympiakos Piraeus | 🇪🇺UEFA Champions League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🇪🇺UEFA Champions League"
             }
@@ -725,28 +524,15 @@
           ]
         },
         {
-          "name": "15:00 | PSG vs Monaco | 🇪🇺UEFA Champions League",
+          "name": "22:00 | Real Madrid U19 vs Chelsea U19 | 🇪🇺UEFA Youth League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "15:00 | PSG vs Monaco | 🇪🇺UEFA Champions League",
+              "name": "22:00 | Real Madrid U19 vs Chelsea U19 | 🇪🇺UEFA Youth League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Champions League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Real Madrid vs Benfica | 🇪🇺UEFA Champions League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Real Madrid vs Benfica | 🇪🇺UEFA Champions League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Champions League"
+              "info": "🇪🇺UEFA Youth League"
             }
           ]
         }
@@ -757,54 +543,54 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "12:45 | Stuttgart vs Celtic | 🇪🇺UEFA Europa League",
+          "name": "0:45 | Atalanta vs Borussia Dortmund | 🇪🇺UEFA Champions League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "12:45 | Stuttgart vs Celtic | 🇪🇺UEFA Europa League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Bologna vs Brann | 🇪🇺UEFA Europa League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Bologna vs Brann | 🇪🇺UEFA Europa League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
-            }
-          ]
-        },
-        {
-          "name": "15:00 | Crystal Palace vs Zrinjski | 🇪🇺UEFA Conference League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "15:00 | Crystal Palace vs Zrinjski | 🇪🇺UEFA Conference League",
+              "name": "0:45 | Atalanta vs Borussia Dortmund | 🇪🇺UEFA Champions League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Conference League"
+              "info": "🇪🇺UEFA Champions League"
             }
           ]
         },
         {
-          "name": "15:00 | Nottingham Forest vs Fenerbahçe | 🇪🇺UEFA Europa League",
+          "name": "3:00 | Real Madrid vs Benfica | 🇪🇺UEFA Champions League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "15:00 | Nottingham Forest vs Fenerbahçe | 🇪🇺UEFA Europa League",
+              "name": "3:00 | Real Madrid vs Benfica | 🇪🇺UEFA Champions League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🇪🇺UEFA Europa League"
+              "info": "🇪🇺UEFA Champions League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | PSG vs Monaco | 🇪🇺UEFA Champions League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | PSG vs Monaco | 🇪🇺UEFA Champions League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Champions League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Juventus vs Galatasaray | 🇪🇺UEFA Champions League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Juventus vs Galatasaray | 🇪🇺UEFA Champions League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Champions League"
             }
           ]
         }
@@ -814,6 +600,58 @@
       "name": "วันที่ 27 ก.พ 2569",
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
+        {
+          "name": "0:45 | Stuttgart vs Celtic | 🇪🇺UEFA Europa League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "0:45 | Stuttgart vs Celtic | 🇪🇺UEFA Europa League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Europa League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Nottingham Forest vs Fenerbahçe | 🇪🇺UEFA Europa League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Nottingham Forest vs Fenerbahçe | 🇪🇺UEFA Europa League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Europa League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Bologna vs Brann | 🇪🇺UEFA Europa League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Bologna vs Brann | 🇪🇺UEFA Europa League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Europa League"
+            }
+          ]
+        },
+        {
+          "name": "3:00 | Crystal Palace vs Zrinjski | 🇪🇺UEFA Conference League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "3:00 | Crystal Palace vs Zrinjski | 🇪🇺UEFA Conference League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🇪🇺UEFA Conference League"
+            }
+          ]
+        },
         {
           "name": "11:00 | Auckland vs Melbourne City | 🇦🇺A-League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
@@ -847,11 +685,11 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "09:00 | Wellington Phoenix vs Sydney FC | 🇦🇺A-League",
+          "name": "9:00 | Wellington Phoenix vs Sydney FC | 🇦🇺A-League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "09:00 | Wellington Phoenix vs Sydney FC | 🇦🇺A-League",
+              "name": "9:00 | Wellington Phoenix vs Sydney FC | 🇦🇺A-League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
@@ -888,15 +726,15 @@
       ]
     },
     {
-      "name": "วันที่ 1 มี.ค 2569",
+      "name": "วันที่ 2 มี.ค 2569",
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "14:45 | Roma vs Juventus | 🇮🇹Serie A",
+          "name": "2:45 | Roma vs Juventus | 🇮🇹Serie A",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:45 | Roma vs Juventus | 🇮🇹Serie A",
+              "name": "2:45 | Roma vs Juventus | 🇮🇹Serie A",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
@@ -907,28 +745,28 @@
       ]
     },
     {
-      "name": "วันที่ 3 มี.ค 2569",
+      "name": "วันที่ 4 มี.ค 2569",
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "14:30 | AFC Bournemouth vs Brentford | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "name": "2:30 | Leeds United vs Sunderland | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:30 | AFC Bournemouth vs Brentford | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://api.rentm3u8.com/images/png/uk-espn.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8",
+              "name": "2:30 | Leeds United vs Sunderland | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             }
           ]
         },
         {
-          "name": "14:30 | Everton vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "name": "2:30 | Everton vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:30 | Everton vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "name": "2:30 | Everton vs Burnley | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
@@ -937,13 +775,13 @@
           ]
         },
         {
-          "name": "14:30 | Leeds United vs Sunderland | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "name": "2:30 | AFC Bournemouth vs Brentford | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:30 | Leeds United vs Sunderland | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
+              "name": "2:30 | AFC Bournemouth vs Brentford | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://api.rentm3u8.com/images/png/uk-espn.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
               "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
             }
@@ -952,28 +790,15 @@
       ]
     },
     {
-      "name": "วันที่ 4 มี.ค 2569",
+      "name": "วันที่ 5 มี.ค 2569",
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "14:30 | Aston Villa vs Chelsea | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "name": "2:30 | Brighton & Hove Albion vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:30 | Aston Villa vs Chelsea | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
-              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
-              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
-              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
-            }
-          ]
-        },
-        {
-          "name": "14:30 | Brighton & Hove Albion vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
-          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-          "stations": [
-            {
-              "name": "14:30 | Brighton & Hove Albion vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "name": "2:30 | Brighton & Hove Albion vs Arsenal | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
@@ -982,11 +807,24 @@
           ]
         },
         {
-          "name": "14:30 | Manchester City vs Nottingham Forest | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "name": "2:30 | Aston Villa vs Chelsea | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "14:30 | Manchester City vs Nottingham Forest | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "name": "2:30 | Aston Villa vs Chelsea | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+              "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png",
+              "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8",
+              "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+              "info": "🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League"
+            }
+          ]
+        },
+        {
+          "name": "2:30 | Manchester City vs Nottingham Forest | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
+          "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
+          "stations": [
+            {
+              "name": "2:30 | Manchester City vs Nottingham Forest | 🏴󠁧󠁢󠁥󠁮󠁧󠁿Premier League",
               "image": "https://api.rentm3u8.com/images/png/uk-espn.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
@@ -1020,11 +858,11 @@
       "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
       "groups": [
         {
-          "name": "09:00 | Auckland vs Perth Glory | 🇦🇺A-League",
+          "name": "9:00 | Auckland vs Perth Glory | 🇦🇺A-League",
           "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
           "stations": [
             {
-              "name": "09:00 | Auckland vs Perth Glory | 🇦🇺A-League",
+              "name": "9:00 | Auckland vs Perth Glory | 🇦🇺A-League",
               "image": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png",
               "url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8",
               "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)",
