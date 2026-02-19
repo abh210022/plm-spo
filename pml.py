@@ -16,13 +16,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
 # =========================
-# CONFIGURATION (Updated for GitHub)
+# CONFIGURATION
 # =========================
 SAVE_DIR = "output"
 OUTPUT_FILE = os.path.join(SAVE_DIR, "pml.txt")
 USER_AGENT = "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)"
 
-# ตารางแปลงชื่อคลาสเป็น Emoji พิเศษ
 SPECIAL_FLAGS = {
     "england": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "wales": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
     "eu": "🇪🇺", "uefa": "🇪🇺", "europe": "🇪🇺",
@@ -82,12 +81,10 @@ def create_driver():
     options.add_argument("--headless=new")
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage") # เพิ่มเพื่อประหยัด RAM บน GitHub
+    options.add_argument("--disable-dev-shm-usage")
     options.add_argument(f"user-agent={USER_AGENT}")
-    
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
-    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     return driver
 
 def scrape_channel(ch):
@@ -103,11 +100,10 @@ def scrape_channel(ch):
         
         if table:
             rows = table.find_all("tr")
-            # แก้ไขเรื่อง Timezone ให้เป็นไทย
             now_th = datetime.utcnow() + timedelta(hours=7)
             year = now_th.year
-
             current_dt = None
+
             for row in rows:
                 if "drow" in row.get("class", []):
                     date_str = row.get_text(strip=True)
@@ -128,10 +124,11 @@ def scrape_channel(ch):
                     if time_tag and match_link:
                         flag = get_flag_emoji_from_class(league_tag)
                         l_name = league_tag.get_text(strip=True) if league_tag else ""
+                        raw_time = time_tag.get_text(strip=True) # ใช้เวลาสดจากหน้าเว็บ
                         
                         local_matches.append({
                             "dt_obj": current_dt,
-                            "time_str": time_tag.get_text(strip=True),
+                            "time_str": raw_time, 
                             "match_name": match_link.get_text(strip=True),
                             "league_full": f"{flag}{l_name}",
                             "channel_name": ch["name"],
@@ -150,7 +147,7 @@ def scrape_channel(ch):
 # =========================
 if __name__ == "__main__":
     now_th = datetime.utcnow() + timedelta(hours=7)
-    print(f"--- Starting Parallel Scrape (5 Workers) @ {now_th.strftime('%H:%M:%S')} ---")
+    today_thai = convert_date_to_thai(now_th)
     
     all_raw_data = []
     with ThreadPoolExecutor(max_workers=5) as executor:
@@ -159,20 +156,14 @@ if __name__ == "__main__":
     for res in results:
         all_raw_data.extend(res)
 
-    if not all_raw_data:
-        print("\n[!] No matches were collected.")
-    else:
+    if all_raw_data:
         grouped = defaultdict(lambda: defaultdict(list))
         for m in all_raw_data:
             dt_key = m["dt_obj"]
             time_str = m["time_str"]
-            try:
-                h, mm = map(int, time_str.split(':'))
-                time_mins = h * 60 + mm
-            except: time_mins = 9999
-
             m_key = f"{time_str} | {m['match_name']} | {m['league_full']}"
-            grouped[dt_key][(time_mins, m_key)].append({
+            
+            grouped[dt_key][m_key].append({
                 "name": m_key,
                 "image": m["channel_logo"],
                 "url": m["stream_url"],
@@ -181,32 +172,28 @@ if __name__ == "__main__":
             })
 
         final_output = {
-            "name": f"Premier League @{convert_date_to_thai(now_th)}",
-            "author": "Update",
+            "name": f"Premier League @{today_thai}",
+            "author": f"Update@{today_thai}", # แก้ไขตำแหน่ง author
             "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
             "groups": []
         }
 
         for dt in sorted(grouped.keys()):
             match_list = []
-            for _, unique_match_key in sorted(grouped[dt].keys()):
-                stations_list = grouped[dt][(_, unique_match_key)]
+            for m_key in sorted(grouped[dt].keys()):
                 match_list.append({
-                    "name": unique_match_key,
+                    "name": m_key,
                     "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-                    "stations": stations_list
+                    "stations": grouped[dt][m_key]
                 })
             
             final_output["groups"].append({
                 "name": f"วันที่ {convert_date_to_thai(dt)}",
-                "image": "https://img2.pic.in.th/live-tvc2a1249d4fร79b85.png",
+                "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
                 "groups": match_list
             })
 
         os.makedirs(SAVE_DIR, exist_ok=True)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
-
-        print(f"\n--- COMPLETED ---")
-        print(f"Total Matches: {len(all_raw_data)}")
-        print(f"Saved to: {OUTPUT_FILE}")
+        print(f"Saved Success to: {OUTPUT_FILE}")
