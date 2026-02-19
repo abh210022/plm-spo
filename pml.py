@@ -117,33 +117,29 @@ def scrape_channel(ch):
                     if time_tag and match_link:
                         flag = get_flag_emoji_from_class(league_tag)
                         l_name = league_tag.get_text(strip=True) if league_tag else ""
+                        raw_time_str = time_tag.get_text(strip=True).replace("am", "").replace("pm", "").strip()
                         
-                        # ✅ จัดการบวกเวลาเพิ่ม 7 ชั่วโมง
-                        raw_time_str = time_tag.get_text(strip=True)
                         try:
-                            # แปลงเวลาดิบเป็น datetime
+                            # บังคับแปลงเวลาเป็น 24hr และบวก 7 ชม.
                             match_dt_utc = datetime.combine(current_dt.date(), datetime.strptime(raw_time_str, "%H:%M").time())
-                            # บวก 7 ชั่วโมง
                             match_dt_thai = match_dt_utc + timedelta(hours=7)
-                            
-                            final_time = match_dt_thai.strftime("%H:%M")
-                            final_date_obj = match_dt_thai # ใช้อันนี้จัดกลุ่ม เพราะวันที่อาจเปลี่ยน
+                            # บังคับใช้รูปแบบ 24 ชม. ทันทีที่แปลงเสร็จ
+                            final_time_24h = match_dt_thai.strftime("%H:%M") 
+                            final_date_obj = match_dt_thai
                         except:
-                            final_time = raw_time_str
+                            final_time_24h = raw_time_str
                             final_date_obj = current_dt
 
                         local_matches.append({
                             "dt_obj": final_date_obj,
-                            "time_str": final_time, 
+                            "time_str": final_time_24h, 
                             "match_name": match_link.get_text(strip=True),
                             "league_full": f"{flag}{l_name}",
                             "channel_name": ch["name"],
                             "channel_logo": ch["logo"],
                             "stream_url": ch["stream_url"]
                         })
-            print(f"✅ {ch['name']} Success")
-    except Exception as e:
-        print(f"❌ {ch['name']} Skip: {str(e)}")
+    except: pass
     finally:
         if driver: driver.quit()
     return local_matches
@@ -160,14 +156,14 @@ if __name__ == "__main__":
         all_raw_data.extend(res)
 
     if all_raw_data:
+        # ใช้ defaultdict และจัดกลุ่มโดยใช้คีย์ที่บังคับเวลาเป็น 24hr
         grouped = defaultdict(lambda: defaultdict(list))
         for m in all_raw_data:
-            # ใช้แค่วันที่ในการจัดกลุ่มใหญ่
             dt_key = m["dt_obj"].date()
-            time_str = m["time_str"]
-            m_key = f"{time_str} | {m['match_name']} | {m['league_full']}"
+            time_24h = m["time_str"]
+            # บังคับสร้างชื่อคู่ด้วยเวลา 24hr อีกครั้งเพื่อความชัวร์
+            m_key = f"{time_24h} | {m['match_name']} | {m['league_full']}"
             
-            # เรียงตามเวลาภายในวันนั้นๆ
             grouped[dt_key][m_key].append({
                 "name": m_key,
                 "image": m["channel_logo"],
@@ -183,10 +179,9 @@ if __name__ == "__main__":
             "groups": []
         }
 
-        # เรียงลำดับวันที่ให้ถูกต้อง
         for dt_date in sorted(grouped.keys()):
             match_list = []
-            # เรียงลำดับชื่อคู่ (ซึ่งขึ้นต้นด้วยเวลา) ให้ถูกต้อง
+            # เรียงลำดับชื่อคู่ (0:45 จะมาก่อน 17:45)
             for m_key in sorted(grouped[dt_date].keys()):
                 match_list.append({
                     "name": m_key,
@@ -203,4 +198,3 @@ if __name__ == "__main__":
         os.makedirs(SAVE_DIR, exist_ok=True)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
-        print(f"Saved Success with +7 Hours to: {OUTPUT_FILE}")
