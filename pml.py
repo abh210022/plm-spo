@@ -1,6 +1,5 @@
 import json
 import time
-import random
 import os
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -55,10 +54,6 @@ CHANNELS = [
     {"name": "V Sport Premier League (Norway )", "url": "https://www.livesoccertv.com/channels/v-sport-premier-league/", "logo": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704", "stream_url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts"}
 ]
 
-# =========================
-# HELPER FUNCTIONS
-# =========================
-
 def get_flag_emoji_from_class(tag):
     if not tag: return "🏆"
     classes = tag.get("class", [])
@@ -79,13 +74,11 @@ def convert_date_to_thai(dt_obj):
 def create_driver():
     options = Options()
     options.add_argument("--headless=new")
-    options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument(f"user-agent={USER_AGENT}")
     service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    return driver
+    return webdriver.Chrome(service=service, options=options)
 
 def scrape_channel(ch):
     local_matches = []
@@ -124,11 +117,24 @@ def scrape_channel(ch):
                     if time_tag and match_link:
                         flag = get_flag_emoji_from_class(league_tag)
                         l_name = league_tag.get_text(strip=True) if league_tag else ""
-                        raw_time = time_tag.get_text(strip=True) # ใช้เวลาสดจากหน้าเว็บ
                         
+                        # ✅ จัดการบวกเวลาเพิ่ม 7 ชั่วโมง
+                        raw_time_str = time_tag.get_text(strip=True)
+                        try:
+                            # แปลงเวลาดิบเป็น datetime
+                            match_dt_utc = datetime.combine(current_dt.date(), datetime.strptime(raw_time_str, "%H:%M").time())
+                            # บวก 7 ชั่วโมง
+                            match_dt_thai = match_dt_utc + timedelta(hours=7)
+                            
+                            final_time = match_dt_thai.strftime("%H:%M")
+                            final_date_obj = match_dt_thai # ใช้อันนี้จัดกลุ่ม เพราะวันที่อาจเปลี่ยน
+                        except:
+                            final_time = raw_time_str
+                            final_date_obj = current_dt
+
                         local_matches.append({
-                            "dt_obj": current_dt,
-                            "time_str": raw_time, 
+                            "dt_obj": final_date_obj,
+                            "time_str": final_time, 
                             "match_name": match_link.get_text(strip=True),
                             "league_full": f"{flag}{l_name}",
                             "channel_name": ch["name"],
@@ -142,9 +148,6 @@ def scrape_channel(ch):
         if driver: driver.quit()
     return local_matches
 
-# =========================
-# MAIN EXECUTION
-# =========================
 if __name__ == "__main__":
     now_th = datetime.utcnow() + timedelta(hours=7)
     today_thai = convert_date_to_thai(now_th)
@@ -159,10 +162,12 @@ if __name__ == "__main__":
     if all_raw_data:
         grouped = defaultdict(lambda: defaultdict(list))
         for m in all_raw_data:
-            dt_key = m["dt_obj"]
+            # ใช้แค่วันที่ในการจัดกลุ่มใหญ่
+            dt_key = m["dt_obj"].date()
             time_str = m["time_str"]
             m_key = f"{time_str} | {m['match_name']} | {m['league_full']}"
             
+            # เรียงตามเวลาภายในวันนั้นๆ
             grouped[dt_key][m_key].append({
                 "name": m_key,
                 "image": m["channel_logo"],
@@ -173,22 +178,24 @@ if __name__ == "__main__":
 
         final_output = {
             "name": f"Premier League @{today_thai}",
-            "author": f"Update@{today_thai}", # แก้ไขตำแหน่ง author
+            "author": f"Update@{today_thai}",
             "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
             "groups": []
         }
 
-        for dt in sorted(grouped.keys()):
+        # เรียงลำดับวันที่ให้ถูกต้อง
+        for dt_date in sorted(grouped.keys()):
             match_list = []
-            for m_key in sorted(grouped[dt].keys()):
+            # เรียงลำดับชื่อคู่ (ซึ่งขึ้นต้นด้วยเวลา) ให้ถูกต้อง
+            for m_key in sorted(grouped[dt_date].keys()):
                 match_list.append({
                     "name": m_key,
                     "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-                    "stations": grouped[dt][m_key]
+                    "stations": grouped[dt_date][m_key]
                 })
             
             final_output["groups"].append({
-                "name": f"วันที่ {convert_date_to_thai(dt)}",
+                "name": f"วันที่ {convert_date_to_thai(datetime.combine(dt_date, datetime.min.time()))}",
                 "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
                 "groups": match_list
             })
@@ -196,4 +203,4 @@ if __name__ == "__main__":
         os.makedirs(SAVE_DIR, exist_ok=True)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
-        print(f"Saved Success to: {OUTPUT_FILE}")
+        print(f"Saved Success with +7 Hours to: {OUTPUT_FILE}")
