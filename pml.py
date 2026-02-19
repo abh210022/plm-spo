@@ -45,6 +45,8 @@ CHANNELS = [
     {"name": "TNT Sports 2 (UK)", "url": "https://www.livesoccertv.com/channels/bt-sport-2-uk/", "logo": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8"},
     {"name": "TNT Sports 3 (UK)", "url": "https://www.livesoccertv.com/channels/bt-sport-europe/", "logo": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8"},
     {"name": "TNT Sports 4 (UK)", "url": "https://www.livesoccertv.com/channels/espn-uk/", "logo": "https://api.rentm3u8.com/images/png/uk-espn.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8"},
+    {"name": "Ziggo Sport 1 (Netherlands)", "url": "https://www.livesoccertv.com/channels/ziggo-sport-select-netherlands/", "logo": "https://api.bigwifegang.org/images/png/nl-ziggosport1.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport1.m3u8"},
+    {"name": "Ziggo Sport 2 (Netherlands)", "url": "https://www.livesoccertv.com/channels/ziggo-sport-voetbal/", "logo": "https://api.bigwifegang.org/images/png/nl-ziggosport2.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/ziggosport2.m3u8"},
     {"name": "V Sport Premier League (Norway )", "url": "https://www.livesoccertv.com/channels/v-sport-premier-league/", "logo": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704", "stream_url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts"}
 ]
 
