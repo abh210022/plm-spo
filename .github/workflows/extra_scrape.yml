@@ -1,0 +1,42 @@
+name: Extra Auto Scrape (PML & SPO)
+
+on:
+  schedule:
+    # รันเวลา 12:15 น. เวลาไทย (ช้ากว่างานแรก 15 นาทีเพื่อกระจายโหลด)
+    - cron: '15 5 * * *'
+  workflow_dispatch: 
+
+jobs:
+  run-extra-scripts:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install selenium beautifulsoup4 webdriver-manager requests
+
+      - name: Create output directory
+        run: mkdir -p output
+
+      - name: Run PML Script
+        run: python pml.py
+
+      - name: Run SPO Script
+        run: python spo.py
+
+      - name: Commit and Push results
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/*
+          git commit -m "Auto-update Extra Scripts: $(date)" || echo "No changes"
+          git push
