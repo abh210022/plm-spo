@@ -3,7 +3,7 @@ name: Extra Auto Scrape (PML & SPO)
 on:
   schedule:
     # รันเวลา 12:15 น. เวลาไทย (ช้ากว่างานแรก 15 นาทีเพื่อกระจายโหลด)
-    - cron: '11 5 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch: 
 
 jobs:
