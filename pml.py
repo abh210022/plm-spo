@@ -1,5 +1,6 @@
 import json
 import time
+import random
 import os
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -8,23 +9,33 @@ from concurrent.futures import ThreadPoolExecutor
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 
 # =========================
-# CONFIGURATION (คงเดิม)
+# CONFIGURATION
 # =========================
-SAVE_DIR = "output"
-OUTPUT_FILE = os.path.join(SAVE_DIR, "pml.txt")
-USER_AGENT = "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko)"
+OUTPUT_FILE = "premierleague.w3u"
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+
+LEAGUE_LOGOS = {
+    "Premier League": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/39.png",
+    "Bundesliga": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/78.png",
+    "Bundesliga 2": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/2._Bundesliga_logo.svg/150px-2._Bundesliga_logo.svg.png",
+    "La Liga": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/140.png",
+    "Segunda Division": "https://www.gamesatlas.com/images/football/leagues/la-liga-2.png",
+    "Serie A": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/135.png",
+    "Ligue 1": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/61.png",
+    "UEFA Champions League": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/2.png",
+    "UEFA Europa League": "https://images.dookeela4.live/1ea51f4905fd47abb43f7ba22c817198:dkl-images-storage/leagues/3.png",
+    "Default": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png"
+}
 
 SPECIAL_FLAGS = {
-    "england": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "scotland": "🏴󠁧󠁢󠁳โค้ดเดิมของคุณทั้งหมด", "wales": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-    "eu": "🇪🇺", "uefa": "🇪🇺", "europe": "🇪🇺",
-    "international": "🌍", "world": "🌎"
+    "england": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "wales": "🏴󠁧󠁢󠁷󠁬สูตร",
+    "eu": "🇪🇺", "uefa": "🇪🇺", "europe": "🇪🇺", "international": "🌍", "spain": "🇪🇸"
 }
 
 THAI_MONTHS = {
@@ -37,37 +48,21 @@ CHANNELS = [
     {"name": "Sky Sport Premier League (Germany)", "url": "https://www.livesoccertv.com/channels/sky-sport-premier-league-de/", "logo": "https://img2.pic.in.th/skp-de.png", "stream_url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/90840.ts"},
     {"name": "Sky Sport Premier League (UK)", "url": "https://www.livesoccertv.com/channels/sky-sports-premier-league/", "logo": "https://img5.pic.in.th/file/secure-sv1/skp-gb.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysportspremierleague.m3u8"},
     {"name": "Hub Premier 1 (Singapore)", "url": "https://www.livesoccertv.com/channels/221-hub-premier-1/", "logo": "https://api.letitgooooo.org/images/png/sg-hubpremier01.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier1.m3u8"},
-    {"name": "Hub Premier 2 (Singapore)", "url": "https://www.livesoccertv.com/channels/222-hub-premier-2/", "logo": "https://api.letitgooooo.org/images/png/sg-hubpremier02.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier2.m3u8"},
-    {"name": "Hub Premier 3 (Singapore)", "url": "https://www.livesoccertv.com/channels/223-hub-premier-3/", "logo": "https://api.letitgooooo.org/images/png/sg-hubpremier03.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier2.m3u8"},
-    {"name": "Hub Premier 4 (Singapore)", "url": "https://www.livesoccertv.com/channels/224-hub-premier-4/", "logo": "https://api.letitgooooo.org/images/png/sg-hubpremier04.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/hubpremier4.m3u8"},
-    {"name": "Sky Sport 1 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-1-new-zealand/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport1.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport1_nz.m3u8"},
-    {"name": "Sky Sport 2 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-2-new-zealand/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport2.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport2_nz.m3u8"},
-    {"name": "Sky Sport 3 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-3-new-zealand/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport3.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport3_nz.m3u8"},
-    {"name": "Sky Sport 4 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-4-nz/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport4.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport4_nz.m3u8"},
-    {"name": "Sky Sport 5 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-5-new-zealand/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport5.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport5_nz.m3u8"},
-    {"name": "Sky Sport 6 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-6-nz/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport6.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport6_nz.m3u8"},
-    {"name": "Sky Sport 7 (NZ)", "url": "https://www.livesoccertv.com/channels/sky-sport-7-nz/", "logo": "https://api.bigwifegang.org/images/png/nz-skysport7.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/skysport7_nz.m3u8"},
-    {"name": "TNT Sports 1 (UK)", "url": "https://www.livesoccertv.com/channels/bt-sport-1-uk/", "logo": "https://rentapi.blackboxsys.net/images/png/uk-btsport1hd.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport1.m3u8"},
-    {"name": "TNT Sports 2 (UK)", "url": "https://www.livesoccertv.com/channels/bt-sport-2-uk/", "logo": "https://rentapi.blackboxsys.net/images/png/uk-btsport2hd.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport2.m3u8"},
-    {"name": "TNT Sports 3 (UK)", "url": "https://www.livesoccertv.com/channels/bt-sport-europe/", "logo": "https://rentapi.blackboxsys.net/images/png/uk-btsport3hd.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport3.m3u8"},
-    {"name": "TNT Sports 4 (UK)", "url": "https://www.livesoccertv.com/channels/espn-uk/", "logo": "https://api.rentm3u8.com/images/png/uk-espn.png", "stream_url": "https://github.com/cattviptv2605/sportworld/raw/refs/heads/main/tntsport4.m3u8"},
+    {"name": "beIN Sports 1 (Thailand)", "url": "https://www.livesoccertv.com/channels/bein-sports-1-hd-thailand/", "logo": "https://ball67.com/assets/channels-logo/bein1.png", "stream_url": "https://raw.githubusercontent.com/Asawin65/ASawin/refs/heads/main/m3u8/sport/bein1.m3u8"},
+    {"name": "beIN Sports 2 (Thailand)", "url": "https://www.livesoccertv.com/channels/bein-sports-2-thailand/", "logo": "https://ball67.com/assets/channels-logo/bein2.png", "stream_url": "https://raw.githubusercontent.com/Asawin65/ASawin/refs/heads/main/m3u8/sport/bein2.m3u8"},
+    {"name": "Now Premier League 1 (Hong Kong )", "url": "https://www.livesoccertv.com/channels/now-621-hong-kong/", "logo": "https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch620_425_305", "stream_url": "https://raw.githubusercontent.com/udzaa2238/now-sport/refs/heads/main/fastopen_live-now_premier-1.m3u8"},
     {"name": "V Sport Premier League (Norway )", "url": "https://www.livesoccertv.com/channels/v-sport-premier-league/", "logo": "https://static.wikia.nocookie.net/logopedia/images/d/db/V_Sport_Premier_League.svg/revision/latest/scale-to-width-down/300?cb=20220701201704", "stream_url": "http://fomo.re/live/t3n1BFmZ1X5d3rLH/uUB0xtNxNYFzMpyo/113250.ts"}
 ]
 
 # =========================
-# HELPER FUNCTIONS (ยึดโค้ดเดิมของคุณ 100%)
+# HELPER FUNCTIONS
 # =========================
-def get_flag_emoji_from_class(tag):
-    if not tag: return "🏆"
-    classes = tag.get("class", [])
-    country_name = next((c for c in classes if c != "flag"), "").lower()
-    if country_name in SPECIAL_FLAGS: return SPECIAL_FLAGS[country_name]
-    if len(country_name) >= 2:
-        try:
-            iso_code = country_name[:2]
-            return "".join(chr(127397 + ord(c.upper())) for c in iso_code)
-        except: return "🏆"
-    return "🏆"
+
+def get_league_logo(league_name):
+    for key, url in LEAGUE_LOGOS.items():
+        if key.lower() in league_name.lower():
+            return url
+    return LEAGUE_LOGOS["Default"]
 
 def convert_date_to_thai(dt_obj):
     month_en = dt_obj.strftime("%B")
@@ -80,109 +75,105 @@ def create_driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument(f"user-agent={USER_AGENT}")
-    service = Service(ChromeDriverManager().install())
-    return webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(options=options)
+    return driver
 
 def scrape_channel(ch):
-    local_matches = []
-    driver = None
-    try:
-        driver = create_driver()
-        driver.get(ch["url"])
-        wait = WebDriverWait(driver, 15)
-        wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table.schedules")))
-        soup = BeautifulSoup(driver.page_source, "html.parser")
-        table = soup.find("table", class_="schedules")
-        
-        if table:
-            rows = table.find_all("tr")
-            now_th = datetime.utcnow() + timedelta(hours=7)
-            year = now_th.year
-            current_dt = None
+    max_retries = 2
+    now = datetime.now()
+    date_limit = now.replace(hour=0, minute=0, second=0, microsecond=0) + timedelta(days=3)
+    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
 
-            for row in rows:
-                if "drow" in row.get("class", []):
-                    date_str = row.get_text(strip=True)
-                    try:
-                        parts = date_str.replace(",", "").split()
-                        m_en = next((p for p in parts if p in THAI_MONTHS), None)
-                        d_num = next((p for p in parts if p.isdigit()), None)
-                        if m_en and d_num:
-                            current_dt = datetime.strptime(f"{m_en} {d_num} {year}", "%B %d %Y")
-                    except: current_dt = None
-                    continue
+    for attempt in range(max_retries):
+        local_matches = []
+        driver = None
+        try:
+            driver = create_driver()
+            driver.get(ch["url"])
+            wait = WebDriverWait(driver, 30)
+            wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "table.schedules")))
+            
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            table = soup.find("table", class_="schedules")
+            
+            if table:
+                rows = table.find_all("tr")
+                current_dt = None
+                year = now.year
 
-                if "matchrow" in row.get("class", []) and current_dt:
-                    time_tag = row.select_one(".timecell span")
-                    match_link = row.select_one("td#match a")
-                    league_tag = row.select_one(".compcell_right a") or row.select_one(".compcell_right")
-                    
-                    if time_tag and match_link:
-                        flag = get_flag_emoji_from_class(league_tag)
-                        l_name = league_tag.get_text(strip=True) if league_tag else ""
-                        
-                        # ✅ บังคับจัดการเวลาให้เป็น 24 ชม. และบวก 7 ชม. อย่างเข้มงวด
-                        raw_time = time_tag.get_text(strip=True).lower() # เช่น "17:45" หรือ "5:45pm"
+                for row in rows:
+                    if "drow" in row.get("class", []):
+                        date_str = row.get_text(strip=True)
                         try:
-                            # 1. เช็คว่าเป็นรูปแบบ 12 ชม. (am/pm) หรือ 24 ชม.
-                            if 'am' in raw_time or 'pm' in raw_time:
-                                time_obj = datetime.strptime(raw_time, "%I:%M%p").time()
-                            else:
-                                time_obj = datetime.strptime(raw_time, "%H:%M").time()
-                            
-                            # 2. รวมวันที่กับเวลา UTC
-                            dt_utc = datetime.combine(current_dt.date(), time_obj)
-                            # 3. บวก 7 ชม. ให้เป็นไทย
-                            dt_thai = dt_utc + timedelta(hours=7)
-                            
-                            # ✅ บังคับผลลัพธ์เป็น "0:45" หรือ "17:45" (24hr) เสมอ
-                            final_time = dt_thai.strftime("%-H:%M") if os.name != 'nt' else dt_thai.strftime("%#H:%M")
-                            final_dt_obj = dt_thai
-                        except:
-                            final_time = raw_time
-                            final_dt_obj = current_dt
+                            parts = date_str.replace(",", "").split()
+                            m_en = next((p for p in parts if p in THAI_MONTHS), None)
+                            d_num = next((p for p in parts if p.isdigit()), None)
+                            if m_en and d_num:
+                                current_dt = datetime.strptime(f"{m_en} {d_num} {year}", "%B %d %Y")
+                        except: current_dt = None
+                        continue
 
-                        local_matches.append({
-                            "dt_obj": final_dt_obj,
-                            "time_str": final_time, 
-                            "match_name": match_link.get_text(strip=True),
-                            "league_full": f"{flag}{l_name}",
-                            "channel_name": ch["name"],
-                            "channel_logo": ch["logo"],
-                            "stream_url": ch["stream_url"]
-                        })
-    except: pass
-    finally:
-        if driver: driver.quit()
-    return local_matches
+                    if "matchrow" in row.get("class", []) and current_dt:
+                        if not (today_start <= current_dt <= date_limit): continue
+
+                        time_tag = row.select_one(".timecell span")
+                        match_link = row.select_one("td#match a")
+                        league_tag = row.select_one(".compcell_right a") or row.select_one(".compcell_right")
+                        
+                        if time_tag and match_link:
+                            time_str = time_tag.get_text(strip=True)
+                            try:
+                                h, m = map(int, time_str.split(':'))
+                                match_full_dt = current_dt.replace(hour=h, minute=m)
+                                if match_full_dt < now: continue 
+                            except: pass
+
+                            l_name = league_tag.get_text(strip=True) if league_tag else "League"
+                            local_matches.append({
+                                "dt_obj": current_dt,
+                                "time_str": time_str,
+                                "match_name": match_link.get_text(strip=True),
+                                "league_full": l_name,
+                                "channel_name": ch["name"],
+                                "channel_logo": ch["logo"],
+                                "stream_url": ch["stream_url"]
+                            })
+                print(f"✅ {ch['name']} Success")
+                return local_matches
+        except Exception:
+            if attempt < max_retries - 1: time.sleep(5)
+        finally:
+            if driver: driver.quit()
+    return []
 
 if __name__ == "__main__":
+    today_thai = convert_date_to_thai(datetime.now())
     all_raw_data = []
-    with ThreadPoolExecutor(max_workers=5) as executor:
+
+    with ThreadPoolExecutor(max_workers=2) as executor:
         results = list(executor.map(scrape_channel, CHANNELS))
 
-    for res in results:
-        all_raw_data.extend(res)
+    for res in results: all_raw_data.extend(res)
 
     if all_raw_data:
-        # ✅ การจัดกลุ่มต้องอิงจากวันที่ไทย (dt_obj) ที่คำนวณมาแล้วเท่านั้น
         grouped = defaultdict(lambda: defaultdict(list))
         for m in all_raw_data:
-            dt_key = m["dt_obj"].date()
-            # ใช้เวลา 24hr ในการสร้าง Key เพื่อการ Sorting ที่ถูกต้อง
-            m_key = f"{m['time_str']} | {m['match_name']} | {m['league_full']}"
+            dt_key = m["dt_obj"]
+            time_str = m["time_str"]
+            h, mm = map(int, time_str.split(':'))
+            time_mins = h * 60 + mm
+
+            display_name = f"{time_str} | {m['match_name']}"
+            unique_key = f"{display_name} | {m['league_full']}"
             
-            grouped[dt_key][m_key].append({
-                "name": m_key,
+            grouped[dt_key][(time_mins, unique_key)].append({
+                "name": display_name,
                 "image": m["channel_logo"],
                 "url": m["stream_url"],
                 "userAgent": USER_AGENT,
                 "info": m["league_full"]
             })
 
-        now_th = datetime.utcnow() + timedelta(hours=7)
-        today_thai = convert_date_to_thai(now_th)
-        
         final_output = {
             "name": f"Premier League @{today_thai}",
             "author": f"Update@{today_thai}",
@@ -190,25 +181,25 @@ if __name__ == "__main__":
             "groups": []
         }
 
-        for dt_date in sorted(grouped.keys()):
+        for dt in sorted(grouped.keys()):
             match_list = []
-            # ✅ บังคับเรียงลำดับคู่ตามเวลา (คู่นอนดึก 00:45 จะต้องมาก่อนคู่เย็น)
-            # เราใช้ dt_obj ของแมตช์แรกในกลุ่มนั้นมาช่วยเรียง
-            sorted_m_keys = sorted(grouped[dt_date].keys(), key=lambda k: datetime.strptime(k.split('|')[0].strip(), "%H:%M"))
-            
-            for m_key in sorted_m_keys:
+            for _, u_key in sorted(grouped[dt].keys()):
+                stations_list = grouped[dt][(_, u_key)]
+                league_logo = get_league_logo(stations_list[0]["info"])
+                clean_name = u_key.split(" | ")[0] + " | " + u_key.split(" | ")[1]
+
                 match_list.append({
-                    "name": m_key,
-                    "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
-                    "stations": grouped[dt_date][m_key]
+                    "name": clean_name,
+                    "image": league_logo,
+                    "stations": stations_list
                 })
             
             final_output["groups"].append({
-                "name": f"วันที่ {convert_date_to_thai(datetime.combine(dt_date, datetime.min.time()))}",
+                "name": f"วันที่ {convert_date_to_thai(dt)}",
                 "image": "https://img2.pic.in.th/live-tvc2a1249d4f879b85.png",
                 "groups": match_list
             })
 
-        os.makedirs(SAVE_DIR, exist_ok=True)
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
+        print(f"Done: {OUTPUT_FILE}")
