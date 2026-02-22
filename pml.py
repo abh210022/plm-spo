@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 # =========================
 # CONFIGURATION
 # =========================
-OUTPUT_FILE = "premierleague.w3u"
+OUTPUT_FILE = "pml.txt"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 
 LEAGUE_LOGOS = {
@@ -203,3 +203,4 @@ if __name__ == "__main__":
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(final_output, f, ensure_ascii=False, indent=2)
         print(f"Done: {OUTPUT_FILE}")
+
